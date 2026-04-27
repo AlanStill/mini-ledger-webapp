@@ -69,8 +69,8 @@ curl -s -X POST http://localhost:8080/transactions \
 
 | # | Assumption | Rationale |
 |---|-----------|-----------|
-| 1 | Ledger is modelled as a single account | Application simplicity, and not explicity requested in the spec  |
-| 2 | Balance calculation favours correctness over speed | Trade off in Read performance accepted, as this can be improved upon with later application development  |
+| 1 | Ledger is modelled as a single account | Application simplicity, and not explicity requested in the spec.  |
+| 2 | Balance calculation favours correctness over speed | Trade off in Read performance accepted, as this can be improved upon with later application development.  |
 | 3 | Negative balances not allowed | Standard ledger behaviour. Overdraft feature out of scope. |
 | 4 | Amounts must be > 0 | Zero-value transactions have no meaning will generate an exception to inform clients. |
 | 5 | Timestamps are server-side UTC | Prevents clock-skew bugs if clients are in different timezones. |
